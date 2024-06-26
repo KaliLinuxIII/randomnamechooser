@@ -7,7 +7,7 @@ const addBtn = document.getElementById('add-btn');
 /**@type {HTMLButtonElement} */
 const randomNameChooserBtn = document.getElementById('random-name-chooser-btn');
 /**@type {HTMLButtonElement} */
-const nameClearBtn = document.getElementById('name-clear-btn');
+const clearNamesBtn = document.getElementById('clear-names-btn');
 
 const names = JSON.parse(localStorage.getItem('names')) || [];
 
@@ -24,8 +24,14 @@ function chooseName() {
   nameDisplay.textContent = randomName;
 };
 
+function clearNames() {
+  localStorage.removeItem('names');
+  names = [];
+};
+
 addBtn.addEventListener('click', addNames);
 randomNameChooserBtn.addEventListener('click', chooseName);
+clearNamesBtn.addEventListener('click', clearNames);
 
 document.addEventListener('keypress', (e) => {
   if (e.key == 'enter') {
