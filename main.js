@@ -12,6 +12,7 @@ const names = [];
 function addNames() {
   const nameInput = nameInputElement.value;
   names.push(nameInput);
+  nameInputElement.value = '';
 };
 
 function chooseName() {
