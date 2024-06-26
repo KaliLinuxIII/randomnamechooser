@@ -25,7 +25,7 @@ addBtn.addEventListener('click', addNames);
 randomNameChooserBtn.addEventListener('click', chooseName);
 
 document.addEventListener('keypress', (e) => {
-  if (e.key === 'enter') {
+  if (e.key == 'enter') {
     addNames();
   };
 });
