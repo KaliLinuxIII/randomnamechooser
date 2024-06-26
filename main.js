@@ -6,6 +6,8 @@ const nameDisplay = document.getElementById('name-display');
 const addBtn = document.getElementById('add-btn');
 /**@type {HTMLButtonElement} */
 const randomNameChooserBtn = document.getElementById('random-name-chooser-btn');
+/**@type {HTMLButtonElement} */
+const nameClearBtn = document.getElementById('name-clear-btn');
 
 const names = JSON.parse(localStorage.getItem('names')) || [];
 
