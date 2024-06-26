@@ -7,12 +7,13 @@ const addBtn = document.getElementById('add-btn');
 /**@type {HTMLButtonElement} */
 const randomNameChooserBtn = document.getElementById('random-name-chooser-btn');
 
-const names = [];
+const names = JSON.parse(localStorage.getItem('names')) || [];
 
 function addNames() {
   const nameInput = nameInputElement.value;
   names.push(nameInput);
   nameInputElement.value = '';
+  localStorage.setItem('names', JSON.stringify(names));
 };
 
 function chooseName() {
